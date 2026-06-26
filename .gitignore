@@ -1,0 +1,25 @@
+# Build output
+build/
+cmake-build-*/
+out/
+
+# JUCE artifacts
+JuceLibraryCode/
+*.vst3/
+*.component/
+
+# IDE / OS
+.idea/
+.vs/
+.vscode/
+*.user
+.DS_Store
+Thumbs.db
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
