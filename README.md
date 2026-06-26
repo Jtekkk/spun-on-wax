@@ -40,6 +40,23 @@ cmake --build build --config Release
 
 The built plugins land under `build/SpunOnWax_artefacts/`.
 
+### Windows installer (Setup.exe)
+
+A one-click installer is produced by CI on every push: open the latest
+[**build run**](https://github.com/Jtekkk/spun-on-wax/actions/workflows/build.yml),
+pick the Windows run, and download the **SpunOnWax-Windows-Installer** artifact
+(`SpunOnWax-1.0.0-Setup.exe`). It installs the VST3 into the system VST3 folder
+and, optionally, the standalone app.
+
+To build the installer locally on Windows (after a Release build), with
+[Inno Setup](https://jrsoftware.org/isinfo.php) installed:
+
+```bat
+iscc packaging\windows\SpunOnWax.iss
+```
+
+The `.exe` is written to `build\installer\`.
+
 ### Using a local JUCE checkout
 
 To avoid the download (or to pin your own JUCE), point CMake at an existing
